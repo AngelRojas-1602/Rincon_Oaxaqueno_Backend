@@ -8,4 +8,4 @@ const UserSchema = new Schema({
     cart: [{ type: Schema.Types.ObjectId, ref: 'product' }]
 }, { timestamps: true });
 
-module.exports = module('user', UserSchema);
+module.exports = model('user', UserSchema);
