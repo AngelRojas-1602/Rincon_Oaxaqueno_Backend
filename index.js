@@ -14,7 +14,7 @@ const AuthRouter = require('./routes/auth');
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(process.env.Link));
 
 app.use(express.json());
 app.use('/products', ProductRouter);

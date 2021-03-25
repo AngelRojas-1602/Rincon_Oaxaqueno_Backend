@@ -6,7 +6,7 @@ const SessionMiddleware = require('../middlewares/session');
 Router.post('/', function(request, response) {
     let { body } = request;
     body.password = md5(body.password);
-    body.role = 'USER';
+    body.role = 'ADMIN';
 
     new UserModel(body).save()
         .then(function(document) {
